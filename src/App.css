@@ -148,11 +148,12 @@
 .user-control {
   cursor: pointer;
 }
+.summary-section .row {
+  margin-bottom: 3em;
+}
 
 
 /* UTILITIES */
-/* SPACING */
-
 
 /* TEXT */
 .small {
@@ -277,5 +278,12 @@
 
   .card {
     width: 100%;
+    text-align: center;
+    margin: 15px 0;
+  }
+
+  .chart-container-summary {
+    width: 240px;
+    margin: auto;
   }
 }

@@ -88,7 +88,7 @@ function VisaCard({ user }) {
     return (
       <div className="visa-card">
         <div className="card-body">
-          <div className="card-visa-name">Bank of Awesome</div>
+          <div className="card-visa-name">BanQ</div>
           <div className="card-visa-number">4562 1122 2592 1162</div>
           <div className="card-visa-details d-flex justify-content-between">
             <span>
@@ -188,6 +188,7 @@ function SummaryChart() {
       type: "doughnut",
       data: data,
       options: {
+        responsive: true,
         borderWidth: 1,
         borderColor: "silver",
         plugins:{
@@ -202,7 +203,7 @@ function SummaryChart() {
   }, []);
 
   return (
-    <div className="chart-container" style={{ position: "relative" }}>
+    <div className="chart-container-summary" style={{ position: "relative" }}>
       <canvas id="summaryChart"></canvas>
     </div>
   );
@@ -361,8 +362,11 @@ function App() {
               </div>
             </main>
             <div className="col-1"></div>
-            <aside className="col-3">
-              <VisaCard user={user} />
+            <aside className="col-3 summary-section">
+              <div className="row">
+                <p>Virtual Card</p>
+                <VisaCard user={user} />
+              </div>
               <div className="row">
                 <p>Transaction Breakdown</p>
                 <SummaryChart />
